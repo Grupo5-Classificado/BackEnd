@@ -1,4 +1,5 @@
 ﻿using LeiloadosWebAPI.Domains;
+using LeiloadosWebAPI.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,12 @@ namespace LeiloadosWebAPI.Interfaces
         /// </summary>
         /// <param name="idUsuario">ID da Usuario a ser deletado</param>
         void Deletar(int idUsuario);
+
+        /// <summary>
+        /// Loga o usuário
+        /// </summary>
+        /// <param name="cred">Credenciais de login</param>
+        Usuario login(LoginViewModel cred);
 
     }
 }

@@ -1,8 +1,6 @@
 CREATE DATABASE Classificados
 GO
 
-USE Classificados
-GO
 
 CREATE TABLE tipoUsuario(
 	idTipoUsuario INT PRIMARY KEY IDENTITY,
@@ -35,7 +33,8 @@ CREATE TABLE comentarios(
 	idUsuario INT FOREIGN KEY REFERENCES usuario(idUsuario),
 	idClassificado INT FOREIGN KEY REFERENCES pedidos(idPedido),
 	comentario varchar(1000) NOT NULL,
-	binarioImg VARBINARY(MAX)
+	binarioImg VARBINARY(MAX),
+	reservado int 
 );
 GO
 

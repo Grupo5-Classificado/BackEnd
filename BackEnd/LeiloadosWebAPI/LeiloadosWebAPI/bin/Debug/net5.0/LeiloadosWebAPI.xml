@@ -72,6 +72,14 @@
             <param name="idEtiquetas">ID da Etiquetas a ser deletada</param>
             <returns></returns>
         </member>
+        <member name="M:LeiloadosWebAPI.Controllers.LoginController.Login(LeiloadosWebAPI.ViewModels.LoginViewModel)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="login">Objeto login que contém o e-mail e a senha do usuário</param>
+            <returns>Retorna um token com as informações do usuário</returns>
+            dominio/api/Login
+        </member>
         <member name="M:LeiloadosWebAPI.Controllers.PedidosController.Listar">
             <summary>
             Lista as Pedidoss
@@ -358,6 +366,17 @@
             Deleta um Usuario
             </summary>
             <param name="idUsuario">ID da Usuario a ser deletado</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IUsuariosRepository.login(LeiloadosWebAPI.ViewModels.LoginViewModel)">
+            <summary>
+            Loga o usuário
+            </summary>
+            <param name="cred">Credenciais de login</param>
+        </member>
+        <member name="T:LeiloadosWebAPI.ViewModels.LoginViewModel">
+            <summary>
+            Classe responsável pelo modelo de login
+            </summary>
         </member>
     </members>
 </doc>

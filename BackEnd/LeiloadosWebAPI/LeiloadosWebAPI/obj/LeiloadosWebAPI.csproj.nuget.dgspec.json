@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\migue\\OneDrive\\Área de Trabalho\\SENAI\\Projeto Interno\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj": {}
+    "C:\\Users\\47360815894\\Desktop\\3o Semestre\\ProjetoIntero\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\migue\\OneDrive\\Área de Trabalho\\SENAI\\Projeto Interno\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj": {
+    "C:\\Users\\47360815894\\Desktop\\3o Semestre\\ProjetoIntero\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\migue\\OneDrive\\Área de Trabalho\\SENAI\\Projeto Interno\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\47360815894\\Desktop\\3o Semestre\\ProjetoIntero\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj",
         "projectName": "LeiloadosWebAPI",
-        "projectPath": "C:\\Users\\migue\\OneDrive\\Área de Trabalho\\SENAI\\Projeto Interno\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj",
-        "packagesPath": "C:\\Users\\migue\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\migue\\OneDrive\\Área de Trabalho\\SENAI\\Projeto Interno\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\obj\\",
+        "projectPath": "C:\\Users\\47360815894\\Desktop\\3o Semestre\\ProjetoIntero\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj",
+        "packagesPath": "C:\\Users\\47360815894\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\47360815894\\Desktop\\3o Semestre\\ProjetoIntero\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\migue\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\47360815894\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[5.0.14, )"
@@ -61,6 +65,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.16.0, )"
             }
           },
           "imports": [
