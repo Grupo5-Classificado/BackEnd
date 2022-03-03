@@ -14,8 +14,8 @@ INSERT INTO pedidos(idUsuario,titulo,pedido) VALUES
 (2,'Preciso de um imóvel!','Preciso de um imóvel para alugar próximo à estação da luz, podem mostrar as ofertas?')
 GO
 
-INSERT INTO comentarios(idUsuario,idClassificado,comentario) VALUES
-(1,1,'Olá, preciso vender o meu PS4 por conta da faculdade, entre em contato comigo pelo meu telefone no perfil!')
+INSERT INTO comentarios(idUsuario,idClassificado,comentario,reservado) VALUES
+(1,1,'Olá, preciso vender o meu PS4 por conta da faculdade, entre em contato comigo pelo meu telefone no perfil!',0)
 GO
 
 INSERT INTO tags(nomeTag) VALUES
@@ -25,4 +25,3 @@ GO
 INSERT INTO etiquetas(idClassificado,idTag) VALUES
 (1,1),(2,4)
 GO
-

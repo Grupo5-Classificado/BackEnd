@@ -34,6 +34,9 @@ namespace LeiloadosWebAPI.Repositories
 
         public void Cadastrar(Usuario NovoUsuario)
         {
+            NovoUsuario.Senha = BCrypt.Net.BCrypt.HashPassword(NovoUsuario.Senha);
+
+
             ctx.Usuarios.Add(NovoUsuario);
 
             ctx.SaveChanges();
@@ -55,7 +58,29 @@ namespace LeiloadosWebAPI.Repositories
 
         public Usuario login(LoginViewModel cred)
         {
-            return ctx.Usuarios.FirstOrDefault(u => u.Email == cred.Email && u.Senha == cred.Senha);
+            var usuario = ctx.Usuarios.FirstOrDefault(u => u.Email == cred.Email);
+
+            if (usuario != null)
+            {
+                   if(usuario.Senha == cred.Senha)
+                {
+                    usuario.Senha = BCrypt.Net.BCrypt.HashPassword(cred.Senha);
+
+                    ctx.Usuarios.Update(usuario);
+                    ctx.SaveChanges();
+
+                    return usuario;
+                }
+
+                // Com o usuário encontrado, temos a hash da senha para poder comparar com a nova entrada pelo input de senha
+                var comparado = BCrypt.Net.BCrypt.Verify(cred.Senha, usuario.Senha);
+                if (comparado)
+                {
+                    return usuario;
+                }
+            }
+
+            return null;
         }
     }
 }

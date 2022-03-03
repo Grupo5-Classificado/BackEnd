@@ -135,3 +135,4 @@ C:\Users\47360815894\Desktop\3o Semestre\ProjetoIntero\BackEnd\BackEnd\Leiloados
 C:\Users\47360815894\Desktop\3o Semestre\ProjetoIntero\BackEnd\BackEnd\LeiloadosWebAPI\LeiloadosWebAPI\obj\Debug\net5.0\LeiloadosWebAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\47360815894\Desktop\3o Semestre\ProjetoIntero\BackEnd\BackEnd\LeiloadosWebAPI\LeiloadosWebAPI\obj\Debug\net5.0\LeiloadosWebAPI.xml
 C:\Users\47360815894\Desktop\3o Semestre\ProjetoIntero\BackEnd\BackEnd\LeiloadosWebAPI\LeiloadosWebAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\47360815894\Desktop\3o Semestre\ProjetoIntero\BackEnd\BackEnd\LeiloadosWebAPI\LeiloadosWebAPI\bin\Debug\net5.0\BCrypt.Net-Next.dll

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IoqULYsLMDPeaFwu4Q0qjWoHi87o2tkxu74sgEmtl+vYVz/tUSMNWPwmJr+YwO3mbV9gCvlQNalvVvhpJeDkbQ==",
+  "dgSpecHash": "Obiq2embb5LWF1IukL5uWORSGLaZb6Ge1rorXy9k+WNxHyTxdC5tXtazpNyT+AEPE19fFsMLl23ok0H+tLdjcw==",
   "success": true,
   "projectFilePath": "C:\\Users\\47360815894\\Desktop\\3o Semestre\\ProjetoIntero\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\47360815894\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\47360815894\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\47360815894\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.14\\microsoft.aspnetcore.authentication.jwtbearer.5.0.14.nupkg.sha512",
     "C:\\Users\\47360815894\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.14\\microsoft.aspnetcore.jsonpatch.5.0.14.nupkg.sha512",

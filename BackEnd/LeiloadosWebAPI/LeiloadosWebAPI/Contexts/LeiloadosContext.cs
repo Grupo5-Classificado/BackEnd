@@ -41,7 +41,7 @@ namespace LeiloadosWebAPI.Contexts
             modelBuilder.Entity<Comentario>(entity =>
             {
                 entity.HasKey(e => e.IdComentario)
-                    .HasName("PK__comentar__C74515DAD051076D");
+                    .HasName("PK__comentar__C74515DA7B941849");
 
                 entity.ToTable("comentarios");
 
@@ -59,21 +59,23 @@ namespace LeiloadosWebAPI.Contexts
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
 
+                entity.Property(e => e.Reservado).HasColumnName("reservado");
+
                 entity.HasOne(d => d.IdClassificadoNavigation)
                     .WithMany(p => p.Comentarios)
                     .HasForeignKey(d => d.IdClassificado)
-                    .HasConstraintName("FK__comentari__idCla__2F10007B");
+                    .HasConstraintName("FK__comentari__idCla__44FF419A");
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
                     .WithMany(p => p.Comentarios)
                     .HasForeignKey(d => d.IdUsuario)
-                    .HasConstraintName("FK__comentari__idUsu__2E1BDC42");
+                    .HasConstraintName("FK__comentari__idUsu__440B1D61");
             });
 
             modelBuilder.Entity<Etiqueta>(entity =>
             {
                 entity.HasKey(e => e.IdEtiqueta)
-                    .HasName("PK__etiqueta__3C1526A7E1739080");
+                    .HasName("PK__etiqueta__3C1526A7E5263F56");
 
                 entity.ToTable("etiquetas");
 
@@ -86,18 +88,18 @@ namespace LeiloadosWebAPI.Contexts
                 entity.HasOne(d => d.IdClassificadoNavigation)
                     .WithMany(p => p.Etiqueta)
                     .HasForeignKey(d => d.IdClassificado)
-                    .HasConstraintName("FK__etiquetas__idCla__35BCFE0A");
+                    .HasConstraintName("FK__etiquetas__idCla__4BAC3F29");
 
                 entity.HasOne(d => d.IdTagNavigation)
                     .WithMany(p => p.Etiqueta)
                     .HasForeignKey(d => d.IdTag)
-                    .HasConstraintName("FK__etiquetas__idTag__34C8D9D1");
+                    .HasConstraintName("FK__etiquetas__idTag__4AB81AF0");
             });
 
             modelBuilder.Entity<Pedido>(entity =>
             {
                 entity.HasKey(e => e.IdPedido)
-                    .HasName("PK__pedidos__A9F619B7A1C43177");
+                    .HasName("PK__pedidos__A9F619B78D6F7D8C");
 
                 entity.ToTable("pedidos");
 
@@ -119,17 +121,17 @@ namespace LeiloadosWebAPI.Contexts
                 entity.HasOne(d => d.IdUsuarioNavigation)
                     .WithMany(p => p.Pedidos)
                     .HasForeignKey(d => d.IdUsuario)
-                    .HasConstraintName("FK__pedidos__idUsuar__2B3F6F97");
+                    .HasConstraintName("FK__pedidos__idUsuar__412EB0B6");
             });
 
             modelBuilder.Entity<Tag>(entity =>
             {
                 entity.HasKey(e => e.IdTag)
-                    .HasName("PK__tags__020FEDB8112147F2");
+                    .HasName("PK__tags__020FEDB8123D86D4");
 
                 entity.ToTable("tags");
 
-                entity.HasIndex(e => e.NomeTag, "UQ__tags__77E2238E5D040247")
+                entity.HasIndex(e => e.NomeTag, "UQ__tags__77E2238E218EBE3C")
                     .IsUnique();
 
                 entity.Property(e => e.IdTag).HasColumnName("idTag");
@@ -144,11 +146,11 @@ namespace LeiloadosWebAPI.Contexts
             modelBuilder.Entity<TipoUsuario>(entity =>
             {
                 entity.HasKey(e => e.IdTipoUsuario)
-                    .HasName("PK__tipoUsua__03006BFFBE86B4E8");
+                    .HasName("PK__tipoUsua__03006BFF9E8B49D4");
 
                 entity.ToTable("tipoUsuario");
 
-                entity.HasIndex(e => e.NomeTipoUsuario, "UQ__tipoUsua__A017BD9F1FFAA18B")
+                entity.HasIndex(e => e.NomeTipoUsuario, "UQ__tipoUsua__A017BD9F1D290860")
                     .IsUnique();
 
                 entity.Property(e => e.IdTipoUsuario).HasColumnName("idTipoUsuario");
@@ -163,11 +165,11 @@ namespace LeiloadosWebAPI.Contexts
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__usuario__645723A64033303F");
+                    .HasName("PK__usuario__645723A62137C912");
 
                 entity.ToTable("usuario");
 
-                entity.HasIndex(e => e.Email, "UQ__usuario__AB6E616469C60E0A")
+                entity.HasIndex(e => e.Email, "UQ__usuario__AB6E6164BD14BD58")
                     .IsUnique();
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
@@ -192,7 +194,7 @@ namespace LeiloadosWebAPI.Contexts
 
                 entity.Property(e => e.Senha)
                     .IsRequired()
-                    .HasMaxLength(10)
+                    .HasMaxLength(255)
                     .IsUnicode(false)
                     .HasColumnName("senha");
 
@@ -201,7 +203,7 @@ namespace LeiloadosWebAPI.Contexts
                 entity.HasOne(d => d.IdTipoUsuarioNavigation)
                     .WithMany(p => p.Usuarios)
                     .HasForeignKey(d => d.IdTipoUsuario)
-                    .HasConstraintName("FK__usuario__idTipoU__286302EC");
+                    .HasConstraintName("FK__usuario__idTipoU__3A81B327");
             });
 
             OnModelCreatingPartial(modelBuilder);

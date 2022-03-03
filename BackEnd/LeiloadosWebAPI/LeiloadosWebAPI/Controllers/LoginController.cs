@@ -51,13 +51,13 @@ namespace LeiloadosWebAPI.Controllers
                     new Claim(ClaimTypes.Role, usuarioBuscado.IdTipoUsuario.ToString())
                 };
 
-                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("spmed-chave-autenticacao"));
+                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("leiloados-chave-autenticacao"));
 
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
                 var meuToken = new JwtSecurityToken(
-                        issuer: "SPMED.webAPI",
-                        audience: "SPMED.webAPI",
+                        issuer: "Leiloados.webAPI",
+                        audience: "Leiloados.webAPI",
                         claims: minhasClaims,
                         expires: DateTime.Now.AddMinutes(30),
                         signingCredentials: creds
