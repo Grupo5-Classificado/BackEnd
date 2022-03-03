@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LeiloadosWebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:LeiloadosWebAPI.Controllers.ComentariosController.Listar">
+            <summary>
+            Lista as Comentarioss
+            </summary>
+            <returns> uma lista de Comentarioss</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.ComentariosController.BuscarPorID(System.Int32)">
+            <summary>
+            Busca uma Comentarios por ID
+            </summary>
+            <param name="idComentarios">O id da Comentarios a ser buscada</param>
+            <returns>A Comentarios encontrada</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.ComentariosController.Cadastrar(LeiloadosWebAPI.Domains.Comentario)">
+            <summary>
+            Cadastra uma Comentarios
+            </summary>
+            <param name="Comentarios">O objeto com os dados da nova Comentarios</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.ComentariosController.Atualizar(System.Int32,LeiloadosWebAPI.Domains.Comentario)">
+            <summary>
+            Atualiza uma Comentarios existente
+            </summary>
+            <param name="idComentarios">id da Comentarios a ser atualizada</param>
+            <param name="ComentariosUPDT">Objeto com os dados novos da Comentarios</param>
+            <returns></returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.ComentariosController.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Comentarios
+            </summary>
+            <param name="idComentarios">ID da Comentarios a ser deletada</param>
+            <returns></returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.EtiquetasController.Listar">
+            <summary>
+            Lista as Etiquetass
+            </summary>
+            <returns> uma lista de Etiquetass</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.EtiquetasController.BuscarPorID(System.Int32)">
+            <summary>
+            Busca uma Etiquetas por ID
+            </summary>
+            <param name="idEtiquetas">O id da Etiquetas a ser buscada</param>
+            <returns>A Etiquetas encontrada</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.EtiquetasController.Cadastrar(LeiloadosWebAPI.Domains.Etiqueta)">
+            <summary>
+            Cadastra uma Etiquetas
+            </summary>
+            <param name="Etiquetas">O objeto com os dados da nova Etiquetas</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.EtiquetasController.Atualizar(System.Int32,LeiloadosWebAPI.Domains.Etiqueta)">
+            <summary>
+            Atualiza uma Etiquetas existente
+            </summary>
+            <param name="idEtiquetas">id da Etiquetas a ser atualizada</param>
+            <param name="EtiquetasUPDT">Objeto com os dados novos da Etiquetas</param>
+            <returns></returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.EtiquetasController.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Etiquetas
+            </summary>
+            <param name="idEtiquetas">ID da Etiquetas a ser deletada</param>
+            <returns></returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.PedidosController.Listar">
+            <summary>
+            Lista as Pedidoss
+            </summary>
+            <returns> uma lista de Pedidoss</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.PedidosController.BuscarPorID(System.Int32)">
+            <summary>
+            Busca uma Pedidos por ID
+            </summary>
+            <param name="idPedidos">O id da Pedidos a ser buscada</param>
+            <returns>A Pedidos encontrada</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.PedidosController.Cadastrar(LeiloadosWebAPI.Domains.Pedido)">
+            <summary>
+            Cadastra uma Pedidos
+            </summary>
+            <param name="Pedidos">O objeto com os dados da nova Pedidos</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.PedidosController.Atualizar(System.Int32,LeiloadosWebAPI.Domains.Pedido)">
+            <summary>
+            Atualiza uma Pedidos existente
+            </summary>
+            <param name="idPedidos">id da Pedidos a ser atualizada</param>
+            <param name="PedidosUPDT">Objeto com os dados novos da Pedidos</param>
+            <returns></returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.PedidosController.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Pedidos
+            </summary>
+            <param name="idPedidos">ID da Pedidos a ser deletada</param>
+            <returns></returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.TagsController.Listar">
+            <summary>
+            Lista as Tagss
+            </summary>
+            <returns> uma lista de Tagss</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.TagsController.BuscarPorID(System.Int32)">
+            <summary>
+            Busca uma Tags por ID
+            </summary>
+            <param name="idTags">O id da Tags a ser buscada</param>
+            <returns>A Tags encontrada</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.TagsController.Cadastrar(LeiloadosWebAPI.Domains.Tag)">
+            <summary>
+            Cadastra uma Tags
+            </summary>
+            <param name="Tags">O objeto com os dados da nova Tags</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.TagsController.Atualizar(System.Int32,LeiloadosWebAPI.Domains.Tag)">
+            <summary>
+            Atualiza uma Tags existente
+            </summary>
+            <param name="idTags">id da Tags a ser atualizada</param>
+            <param name="TagsUPDT">Objeto com os dados novos da Tags</param>
+            <returns></returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.TagsController.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Tags
+            </summary>
+            <param name="idTags">ID da Tags a ser deletada</param>
+            <returns></returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.UsuariosController.Listar">
+            <summary>
+            Lista as Usuarioss
+            </summary>
+            <returns> uma lista de Usuarioss</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.UsuariosController.BuscarPorID(System.Int32)">
+            <summary>
+            Busca uma Usuarios por ID
+            </summary>
+            <param name="idUsuarios">O id da Usuarios a ser buscada</param>
+            <returns>A Usuarios encontrada</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.UsuariosController.Cadastrar(LeiloadosWebAPI.Domains.Usuario)">
+            <summary>
+            Cadastra uma Usuarios
+            </summary>
+            <param name="Usuarios">O objeto com os dados da nova Usuarios</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.UsuariosController.Atualizar(System.Int32,LeiloadosWebAPI.Domains.Usuario)">
+            <summary>
+            Atualiza uma Usuarios existente
+            </summary>
+            <param name="idUsuarios">id da Usuarios a ser atualizada</param>
+            <param name="UsuariosUPDT">Objeto com os dados novos da Usuarios</param>
+            <returns></returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Controllers.UsuariosController.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Usuarios
+            </summary>
+            <param name="idUsuarios">ID da Usuarios a ser deletada</param>
+            <returns></returns>
+        </member>
+        <member name="T:LeiloadosWebAPI.Interfaces.IComentariosRepository">
+            <summary>
+            Interface responsável pelo repositório de comentários
+            </summary>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IComentariosRepository.Listar">
+            <summary>
+            Lista todos os Comentarios
+            </summary>
+            <returns>Uma lista de Comentarios</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IComentariosRepository.BuscarPorID(System.Int32)">
+            <summary>
+            Busca um Comentario a partir de um ID
+            </summary>
+            <param name="idComentario">ID do Comentario a ser buscado</param>
+            <returns>Um Comentario encontrado</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IComentariosRepository.Cadastrar(LeiloadosWebAPI.Domains.Comentario)">
+            <summary>
+            Cadastra um novo Comentario
+            </summary>
+            <param name="NovoComentario">Objeto com as informações a serem cadastradas</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IComentariosRepository.Atualizar(System.Int32,LeiloadosWebAPI.Domains.Comentario)">
+            <summary>
+            Atualiza os dados de um Comentario
+            </summary>
+            <param name="idComentario">ID do Comentario a ser atualizado</param>
+            <param name="ComentarioU">Objeto com as informações a serem atualizadas</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IComentariosRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um Comentario
+            </summary>
+            <param name="idComentario">ID da Comentario a ser deletado</param>
+        </member>
+        <member name="T:LeiloadosWebAPI.Interfaces.IEtiquetasRepository">
+            <summary>
+            Interface responsável pelo repositório de intermediação de tags e pedidos
+            </summary>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IEtiquetasRepository.Listar">
+            <summary>
+            Lista todas as Etiquetas
+            </summary>
+            <returns>Uma lista de Etiquetas</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IEtiquetasRepository.BuscarPorID(System.Int32)">
+            <summary>
+            Busca uma Etiqueta a partir de um ID
+            </summary>
+            <param name="idEtiqueta">ID da Etiqueta a ser buscada</param>
+            <returns>Uma Etiqueta encontrada</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IEtiquetasRepository.Cadastrar(LeiloadosWebAPI.Domains.Etiqueta)">
+            <summary>
+            Cadastra uma nova Etiqueta
+            </summary>
+            <param name="NovaEtiqueta">Objeto com as informações a serem cadastradas</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IEtiquetasRepository.Atualizar(System.Int32,LeiloadosWebAPI.Domains.Etiqueta)">
+            <summary>
+            Atualiza os dados de uma Etiqueta
+            </summary>
+            <param name="idEtiqueta">ID da Etiqueta a ser atualizada</param>
+            <param name="EtiquetaU">Objeto com as informações a serem atualizadas</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IEtiquetasRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Etiqueta
+            </summary>
+            <param name="idEtiqueta">ID da Etiqueta a ser deletada</param>
+        </member>
+        <member name="T:LeiloadosWebAPI.Interfaces.IPedidosRepository">
+            <summary>
+            Interface responsável pelo repositório de pedidos
+            </summary>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IPedidosRepository.Listar">
+            <summary>
+            Lista todos os Pedidos
+            </summary>
+            <returns>Uma lista de Pedidos</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IPedidosRepository.BuscarPorID(System.Int32)">
+            <summary>
+            Busca um Pedido a partir de um ID
+            </summary>
+            <param name="idPedido">ID do Pedido a ser buscado</param>
+            <returns>Um Pedido encontrado</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IPedidosRepository.Cadastrar(LeiloadosWebAPI.Domains.Pedido)">
+            <summary>
+            Cadastra um novo Pedido
+            </summary>
+            <param name="NovoPedido">Objeto com as informações a serem cadastradas</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IPedidosRepository.Atualizar(System.Int32,LeiloadosWebAPI.Domains.Pedido)">
+            <summary>
+            Atualiza os dados de um Pedido
+            </summary>
+            <param name="idPedido">ID do Pedido a ser atualizado</param>
+            <param name="PedidoU">Objeto com as informações a serem atualizadas</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IPedidosRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um Pedido
+            </summary>
+            <param name="idPedido">ID da Pedido a ser deletado</param>
+        </member>
+        <member name="T:LeiloadosWebAPI.Interfaces.ITagsRepository">
+            <summary>
+            Interface responsável pelo repositório de tags
+            </summary>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.ITagsRepository.Listar">
+            <summary>
+            Lista todas as Tags
+            </summary>
+            <returns>Uma lista de Tags</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.ITagsRepository.BuscarPorID(System.Int32)">
+            <summary>
+            Busca uma Tag a partir de um ID
+            </summary>
+            <param name="idTag">ID da Tag a ser buscada</param>
+            <returns>Uma Tag encontrada</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.ITagsRepository.Cadastrar(LeiloadosWebAPI.Domains.Tag)">
+            <summary>
+            Cadastra uma nova Tag
+            </summary>
+            <param name="NovaTag">Objeto com as informações a serem cadastradas</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.ITagsRepository.Atualizar(System.Int32,LeiloadosWebAPI.Domains.Tag)">
+            <summary>
+            Atualiza os dados de uma Tag
+            </summary>
+            <param name="idTag">ID da Tag a ser atualizada</param>
+            <param name="TagU">Objeto com as informações a serem atualizadas</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.ITagsRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta uma Tag
+            </summary>
+            <param name="idTag">ID da Tag a ser deletada</param>
+        </member>
+        <member name="T:LeiloadosWebAPI.Interfaces.IUsuariosRepository">
+            <summary>
+            Interface responsável pelo repositório de usuários
+            </summary>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IUsuariosRepository.Listar">
+            <summary>
+            Lista todos os Usuarios
+            </summary>
+            <returns>Uma lista de Usuarios</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IUsuariosRepository.BuscarPorID(System.Int32)">
+            <summary>
+            Busca um Usuario a partir de um ID
+            </summary>
+            <param name="idUsuario">ID do Usuario a ser buscado</param>
+            <returns>Um Usuario encontrado</returns>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IUsuariosRepository.Cadastrar(LeiloadosWebAPI.Domains.Usuario)">
+            <summary>
+            Cadastra um novo Usuario
+            </summary>
+            <param name="NovoUsuario">Objeto com as informações a serem cadastradas</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IUsuariosRepository.Atualizar(System.Int32,LeiloadosWebAPI.Domains.Usuario)">
+            <summary>
+            Atualiza os dados de um Usuario
+            </summary>
+            <param name="idUsuario">ID do Usuario a ser atualizado</param>
+            <param name="UsuarioU">Objeto com as informações a serem atualizadas</param>
+        </member>
+        <member name="M:LeiloadosWebAPI.Interfaces.IUsuariosRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um Usuario
+            </summary>
+            <param name="idUsuario">ID da Usuario a ser deletado</param>
+        </member>
+    </members>
+</doc>
