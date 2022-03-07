@@ -36,8 +36,6 @@ CREATE TABLE comentarios(
 	idUsuario INT FOREIGN KEY REFERENCES usuario(idUsuario),
 	idClassificado INT FOREIGN KEY REFERENCES pedidos(idPedido),
 	comentario varchar(1000) NOT NULL,
-	binarioImg VARBINARY(MAX),
-	reservado int not null
 );
 GO
 
@@ -53,4 +51,5 @@ CREATE TABLE reservas(
 	idClassificado INT FOREIGN KEY REFERENCES pedidos(idPedido),
 );
 GO
+
 
