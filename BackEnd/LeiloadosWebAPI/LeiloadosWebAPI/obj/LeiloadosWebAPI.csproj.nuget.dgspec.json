@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\47360815894\\Desktop\\3o Semestre\\ProjetoIntero\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj": {}
+    "C:\\Users\\Lucas Araujo\\OneDrive\\Área de Trabalho\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\47360815894\\Desktop\\3o Semestre\\ProjetoIntero\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj": {
+    "C:\\Users\\Lucas Araujo\\OneDrive\\Área de Trabalho\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\47360815894\\Desktop\\3o Semestre\\ProjetoIntero\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas Araujo\\OneDrive\\Área de Trabalho\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj",
         "projectName": "LeiloadosWebAPI",
-        "projectPath": "C:\\Users\\47360815894\\Desktop\\3o Semestre\\ProjetoIntero\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj",
-        "packagesPath": "C:\\Users\\47360815894\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\47360815894\\Desktop\\3o Semestre\\ProjetoIntero\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\obj\\",
+        "projectPath": "C:\\Users\\Lucas Araujo\\OneDrive\\Área de Trabalho\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\LeiloadosWebAPI.csproj",
+        "packagesPath": "C:\\Users\\Lucas Araujo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lucas Araujo\\OneDrive\\Área de Trabalho\\BackEnd\\BackEnd\\LeiloadosWebAPI\\LeiloadosWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\47360815894\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lucas Araujo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

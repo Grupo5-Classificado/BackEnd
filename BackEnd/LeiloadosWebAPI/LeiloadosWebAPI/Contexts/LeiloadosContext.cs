@@ -19,8 +19,8 @@ namespace LeiloadosWebAPI.Contexts
         }
 
         public virtual DbSet<Comentario> Comentarios { get; set; }
-        public virtual DbSet<Etiqueta> Etiquetas { get; set; }
         public virtual DbSet<Pedido> Pedidos { get; set; }
+        public virtual DbSet<Reserva> Reservas { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
         public virtual DbSet<TipoUsuario> TipoUsuarios { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
@@ -30,7 +30,7 @@ namespace LeiloadosWebAPI.Contexts
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=NOTE0111E6\\SQLEXPRESS; initial catalog=Classificados; user Id=sa; pwd=Senai@132;");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-SV3M4A7\\SQLEXPRESS; initial catalog=Classificados; user Id=sa; pwd=Senai@132;");
             }
         }
 
@@ -41,13 +41,11 @@ namespace LeiloadosWebAPI.Contexts
             modelBuilder.Entity<Comentario>(entity =>
             {
                 entity.HasKey(e => e.IdComentario)
-                    .HasName("PK__comentar__C74515DA7B941849");
+                    .HasName("PK__comentar__C74515DA1FEE20AC");
 
                 entity.ToTable("comentarios");
 
                 entity.Property(e => e.IdComentario).HasColumnName("idComentario");
-
-                entity.Property(e => e.BinarioImg).HasColumnName("binarioImg");
 
                 entity.Property(e => e.Comentario1)
                     .IsRequired()
@@ -59,51 +57,27 @@ namespace LeiloadosWebAPI.Contexts
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
 
-                entity.Property(e => e.Reservado).HasColumnName("reservado");
-
                 entity.HasOne(d => d.IdClassificadoNavigation)
                     .WithMany(p => p.Comentarios)
                     .HasForeignKey(d => d.IdClassificado)
-                    .HasConstraintName("FK__comentari__idCla__44FF419A");
+                    .HasConstraintName("FK__comentari__idCla__5535A963");
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
                     .WithMany(p => p.Comentarios)
                     .HasForeignKey(d => d.IdUsuario)
-                    .HasConstraintName("FK__comentari__idUsu__440B1D61");
-            });
-
-            modelBuilder.Entity<Etiqueta>(entity =>
-            {
-                entity.HasKey(e => e.IdEtiqueta)
-                    .HasName("PK__etiqueta__3C1526A7E5263F56");
-
-                entity.ToTable("etiquetas");
-
-                entity.Property(e => e.IdEtiqueta).HasColumnName("idEtiqueta");
-
-                entity.Property(e => e.IdClassificado).HasColumnName("idClassificado");
-
-                entity.Property(e => e.IdTag).HasColumnName("idTag");
-
-                entity.HasOne(d => d.IdClassificadoNavigation)
-                    .WithMany(p => p.Etiqueta)
-                    .HasForeignKey(d => d.IdClassificado)
-                    .HasConstraintName("FK__etiquetas__idCla__4BAC3F29");
-
-                entity.HasOne(d => d.IdTagNavigation)
-                    .WithMany(p => p.Etiqueta)
-                    .HasForeignKey(d => d.IdTag)
-                    .HasConstraintName("FK__etiquetas__idTag__4AB81AF0");
+                    .HasConstraintName("FK__comentari__idUsu__5441852A");
             });
 
             modelBuilder.Entity<Pedido>(entity =>
             {
                 entity.HasKey(e => e.IdPedido)
-                    .HasName("PK__pedidos__A9F619B78D6F7D8C");
+                    .HasName("PK__pedidos__A9F619B75D5F87A9");
 
                 entity.ToTable("pedidos");
 
                 entity.Property(e => e.IdPedido).HasColumnName("idPedido");
+
+                entity.Property(e => e.IdTag).HasColumnName("idTag");
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
 
@@ -118,20 +92,49 @@ namespace LeiloadosWebAPI.Contexts
                     .IsUnicode(false)
                     .HasColumnName("titulo");
 
+                entity.HasOne(d => d.IdTagNavigation)
+                    .WithMany(p => p.Pedidos)
+                    .HasForeignKey(d => d.IdTag)
+                    .HasConstraintName("FK__pedidos__idTag__44FF419A");
+
                 entity.HasOne(d => d.IdUsuarioNavigation)
                     .WithMany(p => p.Pedidos)
                     .HasForeignKey(d => d.IdUsuario)
-                    .HasConstraintName("FK__pedidos__idUsuar__412EB0B6");
+                    .HasConstraintName("FK__pedidos__idUsuar__440B1D61");
+            });
+
+            modelBuilder.Entity<Reserva>(entity =>
+            {
+                entity.HasKey(e => e.IdReserva)
+                    .HasName("PK__reservas__94D104C8B7593C7D");
+
+                entity.ToTable("reservas");
+
+                entity.Property(e => e.IdReserva).HasColumnName("idReserva");
+
+                entity.Property(e => e.IdClassificado).HasColumnName("idClassificado");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
+
+                entity.HasOne(d => d.IdClassificadoNavigation)
+                    .WithMany(p => p.Reservas)
+                    .HasForeignKey(d => d.IdClassificado)
+                    .HasConstraintName("FK__reservas__idClas__5165187F");
+
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.Reservas)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .HasConstraintName("FK__reservas__idUsua__5070F446");
             });
 
             modelBuilder.Entity<Tag>(entity =>
             {
                 entity.HasKey(e => e.IdTag)
-                    .HasName("PK__tags__020FEDB8123D86D4");
+                    .HasName("PK__tags__020FEDB822471C1B");
 
                 entity.ToTable("tags");
 
-                entity.HasIndex(e => e.NomeTag, "UQ__tags__77E2238E218EBE3C")
+                entity.HasIndex(e => e.NomeTag, "UQ__tags__77E2238ECB7B15F4")
                     .IsUnique();
 
                 entity.Property(e => e.IdTag).HasColumnName("idTag");
@@ -146,11 +149,11 @@ namespace LeiloadosWebAPI.Contexts
             modelBuilder.Entity<TipoUsuario>(entity =>
             {
                 entity.HasKey(e => e.IdTipoUsuario)
-                    .HasName("PK__tipoUsua__03006BFF9E8B49D4");
+                    .HasName("PK__tipoUsua__03006BFF2CAF03FA");
 
                 entity.ToTable("tipoUsuario");
 
-                entity.HasIndex(e => e.NomeTipoUsuario, "UQ__tipoUsua__A017BD9F1D290860")
+                entity.HasIndex(e => e.NomeTipoUsuario, "UQ__tipoUsua__A017BD9F75A6F346")
                     .IsUnique();
 
                 entity.Property(e => e.IdTipoUsuario).HasColumnName("idTipoUsuario");
@@ -165,11 +168,11 @@ namespace LeiloadosWebAPI.Contexts
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario)
-                    .HasName("PK__usuario__645723A62137C912");
+                    .HasName("PK__usuario__645723A638308D75");
 
                 entity.ToTable("usuario");
 
-                entity.HasIndex(e => e.Email, "UQ__usuario__AB6E6164BD14BD58")
+                entity.HasIndex(e => e.Email, "UQ__usuario__AB6E616450430435")
                     .IsUnique();
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");

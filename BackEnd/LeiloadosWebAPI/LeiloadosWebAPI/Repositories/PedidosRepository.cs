@@ -1,8 +1,11 @@
 ﻿using LeiloadosWebAPI.Contexts;
 using LeiloadosWebAPI.Domains;
 using LeiloadosWebAPI.Interfaces;
+using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -27,11 +30,12 @@ namespace LeiloadosWebAPI.Repositories
 
         public Pedido BuscarPorID(int idPedido)
         {
-            return ctx.Pedidos.FirstOrDefault(c => c.IdPedido == idPedido);
+            return ctx.Pedidos.Include(x => x.IdUsuarioNavigation).FirstOrDefault(c => c.IdPedido == idPedido);
         }
 
         public void Cadastrar(Pedido NovoPedido)
         {
+
             ctx.Pedidos.Add(NovoPedido);
 
             ctx.SaveChanges();
@@ -48,7 +52,7 @@ namespace LeiloadosWebAPI.Repositories
 
         public List<Pedido> Listar()
         {
-            return ctx.Pedidos.ToList();
+            return ctx.Pedidos.Include(x => x.IdTagNavigation).ToList();
         }
     }
 }

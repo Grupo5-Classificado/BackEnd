@@ -2,6 +2,7 @@ CREATE DATABASE Classificados
 GO
 
 USE Classificados
+GO
 
 CREATE TABLE tipoUsuario(
 	idTipoUsuario INT PRIMARY KEY IDENTITY,
@@ -24,6 +25,7 @@ GO
 CREATE TABLE pedidos(
 	idPedido INT PRIMARY KEY IDENTITY,
 	idUsuario INT FOREIGN KEY REFERENCES usuario(idUsuario),
+	idTag INT FOREIGN KEY REFERENCES tags(idTag),
 	pedido TEXT NOT NULL,
 	titulo VARCHAR(100) NOT NULL,
 );
@@ -39,16 +41,16 @@ CREATE TABLE comentarios(
 );
 GO
 
-
 CREATE TABLE tags(
 	idTag INT PRIMARY KEY IDENTITY,
 	nomeTag VARCHAR(30) UNIQUE NOT NULL
 );
 GO
 
-CREATE TABLE etiquetas(
-	idEtiqueta INT PRIMARY KEY IDENTITY,
-	idTag INT FOREIGN KEY REFERENCES tags(idTag),
+CREATE TABLE reservas(
+	idReserva INT PRIMARY KEY IDENTITY,
+	idUsuario INT FOREIGN KEY REFERENCES usuario(idUsuario),
 	idClassificado INT FOREIGN KEY REFERENCES pedidos(idPedido),
 );
 GO
+

@@ -9,12 +9,12 @@ namespace LeiloadosWebAPI.Domains
     {
         public Tag()
         {
-            Etiqueta = new HashSet<Etiqueta>();
+            Pedidos = new HashSet<Pedido>();
         }
 
         public int IdTag { get; set; }
         public string NomeTag { get; set; }
 
-        public virtual ICollection<Etiqueta> Etiqueta { get; set; }
+        public virtual ICollection<Pedido> Pedidos { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using LeiloadosWebAPI.Contexts;
 using LeiloadosWebAPI.Domains;
 using LeiloadosWebAPI.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,6 @@ namespace LeiloadosWebAPI.Repositories
         public void Atualizar(int idComentario, Comentario ComentarioU)
         {
             Comentario ComentarioBuscado = ctx.Comentarios.Find(idComentario);
-
-            if (ComentarioU.Comentario1 != null) { ComentarioBuscado.Comentario1 = ComentarioU.Comentario1; }
-            if (ComentarioU.BinarioImg != null) { ComentarioBuscado.BinarioImg = ComentarioU.BinarioImg; }
 
             ctx.Comentarios.Update(ComentarioBuscado);
 
@@ -47,7 +45,7 @@ namespace LeiloadosWebAPI.Repositories
 
         public List<Comentario> Listar()
         {
-            return ctx.Comentarios.ToList();
+            return ctx.Comentarios.Include(x => x.IdClassificadoNavigation).Include(y => y.IdUsuarioNavigation).ToList();
         }
     }
 }

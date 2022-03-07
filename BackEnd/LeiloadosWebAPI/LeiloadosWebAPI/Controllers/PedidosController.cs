@@ -60,11 +60,11 @@ namespace LeiloadosWebAPI.Controllers
 
             }
 
-            /// <summary>
-            /// Cadastra uma Pedidos
-            /// </summary>
-            /// <param name="Pedidos">O objeto com os dados da nova Pedidos</param>
-            [HttpPost]
+        /// <summary>
+        /// Cadastra uma Pedidos
+        /// </summary>
+        /// <param name="Pedidos">O objeto com os dados da nova Pedidos</param>
+        [HttpPost]
             public IActionResult Cadastrar(Pedido Pedidos)
             {
 

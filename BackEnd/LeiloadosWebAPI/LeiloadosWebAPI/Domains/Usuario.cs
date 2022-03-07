@@ -11,6 +11,7 @@ namespace LeiloadosWebAPI.Domains
         {
             Comentarios = new HashSet<Comentario>();
             Pedidos = new HashSet<Pedido>();
+            Reservas = new HashSet<Reserva>();
         }
 
         public int IdUsuario { get; set; }
@@ -25,5 +26,6 @@ namespace LeiloadosWebAPI.Domains
         public virtual TipoUsuario IdTipoUsuarioNavigation { get; set; }
         public virtual ICollection<Comentario> Comentarios { get; set; }
         public virtual ICollection<Pedido> Pedidos { get; set; }
+        public virtual ICollection<Reserva> Reservas { get; set; }
     }
 }

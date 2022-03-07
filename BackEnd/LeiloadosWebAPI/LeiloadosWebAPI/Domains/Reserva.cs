@@ -5,13 +5,13 @@ using System.Collections.Generic;
 
 namespace LeiloadosWebAPI.Domains
 {
-    public partial class Etiqueta
+    public partial class Reserva
     {
-        public int IdEtiqueta { get; set; }
-        public int? IdTag { get; set; }
+        public int IdReserva { get; set; }
+        public int? IdUsuario { get; set; }
         public int? IdClassificado { get; set; }
 
         public virtual Pedido IdClassificadoNavigation { get; set; }
-        public virtual Tag IdTagNavigation { get; set; }
+        public virtual Usuario IdUsuarioNavigation { get; set; }
     }
 }
